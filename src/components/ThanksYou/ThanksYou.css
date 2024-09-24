@@ -1,0 +1,52 @@
+.thanks {
+  padding: 40px 52px;
+}
+
+@media screen and (min-width: 1024px) {
+  .local {
+  padding: 100px 52px;
+  }
+}
+
+.thanks_img {
+  filter: grayscale(100%);
+}
+
+.thanks_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-evenly;
+}
+
+.thanks_warpper-item {
+  position: relative;
+  max-width: 310px;
+}
+
+.thanks_headding-title {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  font-size: clamp(42px, 8vw, 55px);
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+@media screen and (max-width:767px) {
+  .thanks_headding-title {
+    top: -2rem;
+  }
+}
+
+.thanks_headding-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 1rem;
+}

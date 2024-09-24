@@ -1,6 +1,5 @@
 import './Local.css'
 
-
 const Local = () => {
   return (
     <section className="local">
