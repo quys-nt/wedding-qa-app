@@ -18,11 +18,11 @@ const Schedule = () => {
         opacity: 1,
         duration: 1,
         stagger: 0.4,
-        delay: 1,
+        delay: 0.4,
         ease: "expo.out",
         scrollTrigger: {
-          trigger: '.schedule',
-          start: "top center",
+          trigger: '.schedule_animation',
+          start: "top 80%",
           markers: true,
         },
       });
