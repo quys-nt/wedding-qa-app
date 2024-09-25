@@ -31,7 +31,7 @@ const ThanksYou = () => {
         y: -30,
         opacity: 0,
         duration: 1,
-        delay: 0.4,
+        delay: 1,
         ease: "back.out(1.7)",
       }).from(
         ".intro01", {
@@ -45,7 +45,7 @@ const ThanksYou = () => {
         y: -30,
         opacity: 0,
         duration: 1,
-        delay: 0.4,
+        delay: 1,
         ease: "back.out(1.7)",
       }).from(
         ".intro02", {

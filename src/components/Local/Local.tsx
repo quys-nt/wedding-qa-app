@@ -20,7 +20,7 @@ const Local = () => {
         .fromTo(
           ".local_heading-local",
           { y: -30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, delay: 0.4 }
+          { y: 0, opacity: 1, duration: 0.8, delay: 1 }
         )
         .from(
           ".itemLeft",

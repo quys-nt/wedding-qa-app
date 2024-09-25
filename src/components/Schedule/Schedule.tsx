@@ -13,7 +13,7 @@ const Schedule = () => {
       const timeline = gsap.timeline( {
         scrollTrigger: {
           trigger: '.schedule',
-          start: "top 25%",
+          start: "top center",
         },
       })
       timeline.fromTo('.schedule_animation', {
@@ -24,7 +24,7 @@ const Schedule = () => {
         y: 0,
         duration: 1,
         stagger: 0.4,
-        delay: 0.8,
+        delay: 1,
         ease: "expo.out",
       });
 
