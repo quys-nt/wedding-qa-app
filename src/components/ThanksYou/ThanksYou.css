@@ -8,9 +8,9 @@
   }
 }
 
-.thanks_img {
+/* .thanks_img {
   filter: grayscale(100%);
-}
+} */
 
 .thanks_wrapper {
   display: flex;

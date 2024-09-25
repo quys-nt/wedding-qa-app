@@ -9,13 +9,13 @@ import Footer from './components/Footer/Footer'
 function App() {
 
   return (
-    <>
+    <main>
       <Mainvisaul />
       <Schedule />
       <Local />
       <ThanksYou />
       <Footer />
-    </>
+    </main>
   )
 }
 

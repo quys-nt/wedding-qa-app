@@ -41,10 +41,6 @@
   }
 }
 
-.mv_item img {
-  filter: grayscale(100%);
-}
-
 .mv_heading-date {
   position: absolute;
   top: 0;

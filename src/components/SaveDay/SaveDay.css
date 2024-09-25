@@ -1,0 +1,57 @@
+.save-day {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;  
+  align-items: center;
+}
+.save-day__inner {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  padding: 40px;
+  max-width: 890px;
+  margin: auto;
+  padding-inline: 12px;
+  color: #000;
+  border-radius: 2px;
+  text-align: center;
+  background: url("/assets/images/img-save-day-bg-02.png") no-repeat center;
+  background-size: contain;
+}
+
+.save-day__heading {
+  font: 300 16px "Roboto Slab", serif;
+  text-transform: uppercase;
+}
+
+.save-day__heading span {
+  font: 400 28px "Dancing Script", cursive;
+  text-transform: capitalize;
+}
+
+.save-day__heading-01 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font: 600 6rem "Dancing Script", cursive;
+  font-size: clamp(5rem, 8vw, 6rem);
+  transform: translate(-50%, -50%);
+  color: #fbfafa;
+  line-height: 1.2;
+}
+
+.save-day__heading-02 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font: 400 5rem "Great Vibes", system-ui;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  transform: translate(-50%, -50%) rotate(-10deg);
+  color: #b44a4d;
+  white-space: nowrap;
+}

@@ -41,9 +41,9 @@
   }
 }
 
-.local_item img {
+/* .local_item img {
   filter: grayscale(100%);
-}
+} */
 
 .local_heading-local {
   position: absolute;
