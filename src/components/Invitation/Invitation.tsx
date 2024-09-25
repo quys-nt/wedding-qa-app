@@ -19,7 +19,8 @@ const Invitation = () => {
           scrollTrigger: {
             trigger: '.invitation_img-left',
             start: "top center",
-            markers: false,
+          invalidateOnRefresh: true,
+          markers: false,
           }
         }
       )

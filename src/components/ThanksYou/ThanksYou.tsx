@@ -14,7 +14,7 @@ const ThanksYou = () => {
         scrollTrigger: {
           trigger: '.items01',
           start: "top center",
-          end: "top bottom",
+          invalidateOnRefresh: true,
           markers: false,
         }
       })
@@ -23,6 +23,7 @@ const ThanksYou = () => {
         scrollTrigger: {
           trigger: '.items02',
           start: "top center",
+          invalidateOnRefresh: true,
           markers: false,
         }
       })
