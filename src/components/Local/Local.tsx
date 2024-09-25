@@ -12,7 +12,7 @@ const Local = () => {
         scrollTrigger: {
           trigger: '.local',
           start: "top center",
-          markers: true,
+          markers: false,
         }
       });
 
@@ -20,7 +20,7 @@ const Local = () => {
         .fromTo(
           ".local_heading-local",
           { y: -30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8, delay: 1 }
+          { y: 0, opacity: 1, duration: 0.8, delay: 0.8 }
         )
         .from(
           ".itemLeft",
