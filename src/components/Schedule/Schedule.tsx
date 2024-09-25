@@ -24,7 +24,7 @@ const Schedule = () => {
         scrollTrigger: {
           trigger: '.schedule_animation',
           start: "top 80%",
-          markers: false,
+          markers: true,
         },
       });
 
