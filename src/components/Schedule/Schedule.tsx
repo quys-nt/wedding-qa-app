@@ -23,7 +23,7 @@ const Schedule = () => {
         scrollTrigger: {
           trigger: '.schedule',
           start: "top 25%",
-          end: "top bottom",
+          invalidateOnRefresh: true,
           markers: true,
         },
       });

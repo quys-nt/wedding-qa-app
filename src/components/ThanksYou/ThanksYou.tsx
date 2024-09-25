@@ -14,6 +14,7 @@ const ThanksYou = () => {
         scrollTrigger: {
           trigger: '.items01',
           start: "top center",
+          end: "top bottom",
           markers: false,
         }
       })
