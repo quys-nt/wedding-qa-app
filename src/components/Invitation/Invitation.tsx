@@ -11,26 +11,30 @@ const Invitation = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.invitation',
-          start: "top 20%",
-          markers: false,
+      gsap.fromTo(
+        ".invitation_img-left",
+        { xPercent: -100, opacity: 0 },
+        {
+          xPercent: 0, opacity: 1, duration: 0.8,
+          scrollTrigger: {
+            trigger: '.invitation_img-left',
+            start: "top center",
+            markers: false,
+          }
         }
-      });
-
-      timeline
-        .fromTo(
-          ".invitation_img-left",
-          { xPercent: -100, opacity: 0 },
-          { xPercent: 0, opacity: 1, duration: 0.8 }
-        )
-        .fromTo(
-          ".invitation_img-right",
-          { xPercent: 100, opacity: 0 },
-          { xPercent: 0, opacity: 1, duration: 0.8 },
-          "-=1"
-        )
+      )
+      gsap.fromTo(
+        ".invitation_img-right",
+        { xPercent: 100, opacity: 0 },
+        {
+          xPercent: 0, opacity: 1, duration: 0.8,
+          scrollTrigger: {
+            trigger: '.invitation_img-right',
+            start: "top center",
+            markers: false,
+          }
+        },
+      )
     });
     return () => ctx.revert();
   }, []);

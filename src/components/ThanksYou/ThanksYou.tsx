@@ -10,44 +10,63 @@ gsap.registerPlugin(ScrollTrigger);
 const ThanksYou = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: '.thanks',
-          start: "top 20%",
+          trigger: '.items01',
+          start: "top center",
           markers: false,
         }
-      });
-      timeline
-        .from(
-          [".title01", ".title02"], {
-          y: -30,
-          opacity: 0,
-          duration: 1,
-          ease: "back.out(1.7)",
-          stagger: 0.4,
+      })
+
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.items02',
+          start: "top center",
+          markers: false,
         }
-        )
-        .from(
-          [".intro01", ".intro02"], {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.4,
-        })
+      })
+
+      tl.from(
+        ".title01", {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4,
+        ease: "back.out(1.7)",
+      }).from(
+        ".intro01", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8
+      })
+
+      tl2.from(
+        ".title02", {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4,
+        ease: "back.out(1.7)",
+      }).from(
+        ".intro02", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+      })
     });
     return () => ctx.revert();
   }, []);
   return (
     <div className="thanks">
       <div className="thanks_wrapper">
-        <div className="thanks_warpper-item">
+        <div className="thanks_warpper-item items01">
           <p className="thanks_headding-title title01">Cảm ơn</p>
           <img src={imgThank01} alt="thanks you" className="thanks_img" />
           <p className="thanks_headding-intro intro01">
             Cảm ơn sự hiện diện của quý khách trong ngày cưới của chúng tôi, đó là niềm vinh dự và niềm hạnh phúc lớn lao với gia đình chúng tôi.
           </p>
         </div>
-        <div className="thanks_warpper-item">
+        <div className="thanks_warpper-item items02">
           <p className="thanks_headding-title title02">Thứ lỗi</p>
           <img src={imgThank02} alt="thanks you" className="thanks_img" />
           <p className="thanks_headding-intro intro02">

@@ -11,8 +11,7 @@ const Local = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: '.local',
-          start: "top 20%",
-          // toggleActions: "play none none reverse",
+          start: "top center",
           markers: false,
         }
       });
@@ -21,7 +20,7 @@ const Local = () => {
         .fromTo(
           ".local_heading-local",
           { y: -30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 }
+          { y: 0, opacity: 1, duration: 0.8, delay: 0.4 }
         )
         .from(
           ".itemLeft",

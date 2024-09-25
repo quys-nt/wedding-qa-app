@@ -9,25 +9,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
   useEffect(() => {
-    gsap.fromTo('.schedule_items', {
-      opacity: 0,
-      y: 20,
-    }, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.4,
-      ease: "expo.out",
-      scrollTrigger: {
-        trigger: '.schedule',
-        start: "top 20%",
-        markers: false,
-      },
-    });
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline( {
+        scrollTrigger: {
+          trigger: '.schedule',
+          start: "top 25%",
+        },
+      })
+      timeline.fromTo('.schedule_animation', {
+        opacity: 0,
+        y: 40,
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.4,
+        delay: 0.8,
+        ease: "expo.out",
+      });
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
+    })
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -36,22 +38,22 @@ const Schedule = () => {
         <img src={imgBg} alt="bg schedule" className="schedule_bg-img" />
       </div>
       <div className="schedule_wrapper">
-        <p className='schedule_heading-intro'>Tóm tắt bữa tiệc</p>
-        <h2 className='schedule_heading-title'>Lịch trình ngày đặc biệt của chúng tôi</h2>
+        <p className='schedule_heading-intro schedule_animation'>Tóm tắt bữa tiệc</p>
+        <h2 className='schedule_heading-title schedule_animation'>Lịch trình ngày đặc biệt của chúng tôi</h2>
         <div className="schedule_inner">
-          <div className="schedule_items">
+          <div className="schedule_items schedule_animation">
             <p className="schedule_items-text01">9:00 Sáng</p>
             <p className='schedule_items-text02'>Hôn Lễ Cử Hành Tại Tư Gia</p>
           </div>
-          <div className="schedule_items">
+          <div className="schedule_items schedule_animation">
             <p className="schedule_items-text01">11:00 Sáng</p>
             <p className='schedule_items-text02'>Chào Đón Khách Mời</p>
           </div>
-          <div className="schedule_items">
+          <div className="schedule_items schedule_animation">
             <p className="schedule_items-text01">11:30 Sáng</p>
             <p className='schedule_items-text02'>Cử Hành Hôn Lễ Tại Nhà Hàng</p>
           </div>
-          <div className="schedule_items">
+          <div className="schedule_items schedule_animation">
             <p className="schedule_items-text01">12:00 Sáng</p>
             <p className='schedule_items-text02'>Ăn Uống và Ca Hát</p>
           </div>

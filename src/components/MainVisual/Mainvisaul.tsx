@@ -28,11 +28,13 @@ const Mainvisaul = () => {
         }, "-=1").from('.imgLeft', {
           x: -40,
           opacity: 0,
-          duration: 0.8
+          duration: 0.8,
+          delay: 0.4,
         }).from('.imgRight', {
           x: 40,
           opacity: 0,
-          duration: 0.8
+          duration: 0.8,
+          delay: 0.4,
         }, '-=1')
       }, comp);
       return () => ctx.revert();
