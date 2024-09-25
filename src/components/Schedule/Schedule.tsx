@@ -10,13 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Schedule = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const timeline = gsap.timeline( {
-        scrollTrigger: {
-          trigger: '.schedule',
-          start: "top center",
-        },
-      })
-      timeline.fromTo('.schedule_animation', {
+      gsap.fromTo('.schedule_animation', {
         opacity: 0,
         y: 40,
       }, {
@@ -26,6 +20,11 @@ const Schedule = () => {
         stagger: 0.4,
         delay: 1,
         ease: "expo.out",
+        scrollTrigger: {
+          trigger: '.schedule',
+          start: "top 25%",
+          markers: true,
+        },
       });
 
     })
