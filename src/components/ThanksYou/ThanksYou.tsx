@@ -12,16 +12,16 @@ const ThanksYou = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: '.items01',
-          start: "top center",
+          trigger: '.title01',
+          start: "top 80%",
           markers: false,
         }
       })
 
       const tl2 = gsap.timeline({
         scrollTrigger: {
-          trigger: '.items02',
-          start: "top center",
+          trigger: '.title02',
+          start: "top 80%",
           markers: false,
         }
       })
@@ -31,7 +31,7 @@ const ThanksYou = () => {
         y: -30,
         opacity: 0,
         duration: 1,
-        delay: 1,
+        delay: 0.4,
         ease: "back.out(1.7)",
       }).from(
         ".intro01", {
@@ -45,7 +45,7 @@ const ThanksYou = () => {
         y: -30,
         opacity: 0,
         duration: 1,
-        delay: 1,
+        delay: 0.4,
         ease: "back.out(1.7)",
       }).from(
         ".intro02", {

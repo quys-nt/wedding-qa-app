@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +8,7 @@ import imgBg from "/assets/images/gallery/gallery18.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Schedule = () => {
+  const comp = useRef(null)
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo('.schedule_animation', {
@@ -23,7 +24,7 @@ const Schedule = () => {
         scrollTrigger: {
           trigger: '.schedule_animation',
           start: "top 80%",
-          markers: true,
+          markers: false,
         },
       });
 
@@ -32,7 +33,7 @@ const Schedule = () => {
   }, []);
 
   return (
-    <section className="schedule">
+    <section className="schedule" ref={comp}>
       <div className="schedule_bg">
         <img src={imgBg} alt="bg schedule" className="schedule_bg-img" />
       </div>

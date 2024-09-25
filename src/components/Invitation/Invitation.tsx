@@ -16,10 +16,11 @@ const Invitation = () => {
         { xPercent: -100, opacity: 0 },
         {
           xPercent: 0, opacity: 1, duration: 0.8,
+          delay: 0.4,
           scrollTrigger: {
             trigger: '.invitation_img-left',
-            start: "top center",
-          markers: false,
+            start: "top 80%",
+            markers: false,
           }
         }
       )
@@ -28,9 +29,10 @@ const Invitation = () => {
         { xPercent: 100, opacity: 0 },
         {
           xPercent: 0, opacity: 1, duration: 0.8,
+          delay: 0.4,
           scrollTrigger: {
             trigger: '.invitation_img-right',
-            start: "top center",
+            start: "top 80%",
             markers: false,
           }
         },
