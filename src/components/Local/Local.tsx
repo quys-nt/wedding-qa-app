@@ -12,7 +12,7 @@ const Local = () => {
         scrollTrigger: {
           trigger: '.local',
           start: "top center",
-          markers: false,
+          markers: true,
         }
       });
 

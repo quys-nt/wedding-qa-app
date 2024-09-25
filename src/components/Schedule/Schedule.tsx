@@ -11,7 +11,7 @@ const Schedule = () => {
   const comp = useRef(null)
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.schedule_animation', {
+      gsap.fromTo('.schedule', {
         y: 40,
         opacity: 0,
       }, {
@@ -23,8 +23,8 @@ const Schedule = () => {
         ease: "expo.out",
         scrollTrigger: {
           trigger: '.schedule_animation',
-          start: "top 80%",
-          markers: true,
+          start: "top center",
+          markers: false,
         },
       });
 
