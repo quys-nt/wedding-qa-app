@@ -25,6 +25,7 @@ const SaveDay = ({ triggerAnimation }: SaveDayProps) => {
         scale: 2,
         duration: 0.8,
         delay: 0.4,
+        autoAlpha: 0,
       },"-=1");
     }
   }, [triggerAnimation]);
