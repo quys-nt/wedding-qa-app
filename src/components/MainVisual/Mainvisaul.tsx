@@ -19,7 +19,7 @@ const Mainvisaul = () => {
           y: -30,
           opacity: 0,
           duration: 1,
-          delay: 1.4,
+          delay: 1.6,
           ease: "back.out(1.7)",
         }, "+=2").from('.mv_heading-intro', {
           y: 30,

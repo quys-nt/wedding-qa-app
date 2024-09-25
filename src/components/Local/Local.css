@@ -11,7 +11,7 @@
 
 .local_container {
   display: grid;
-  grid-template-columns: minmax(80px, 200px) minmax(200px, 420px) minmax(80px, 200px);
+  grid-template-columns: minmax(80px, 270px) minmax(200px, 420px) minmax(80px, 270px);
   justify-content: space-between;
   align-items: center;
   gap: 100px;
@@ -41,10 +41,6 @@
   }
 }
 
-/* .local_item img {
-  filter: grayscale(100%);
-} */
-
 .local_heading-local {
   position: absolute;
   top: -10%;
@@ -66,6 +62,6 @@
   margin-top: clamp(1rem, 2vw, 2rem);
   font-weight: 400;
   line-height: 1.6;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1.6rem);
   text-transform: uppercase;
 }

@@ -3,8 +3,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .local {
-  padding: 100px 52px;
+  .thanks {
+    padding: 100px 52px;
   }
 }
 
@@ -37,7 +37,7 @@
   mix-blend-mode: multiply;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .thanks_headding-title {
     top: -2rem;
   }
