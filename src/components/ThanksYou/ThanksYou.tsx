@@ -1,64 +1,8 @@
-import { useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './ThanksYou.css'
 import imgThank01 from "/assets/images/gallery/gallery36.jpg";
 import imgThank02 from "/assets/images/gallery/gallery14.jpg";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ThanksYou = () => {
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.items01',
-          start: "top 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        }
-      })
-
-      const tl2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.items02',
-          start: "top 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        }
-      })
-
-      tl.from(
-        ".title01", {
-        y: -30,
-        opacity: 0,
-        duration: 1,
-        delay: 0.8,
-        ease: "back.out(1.7)",
-      }).from(
-        ".intro01", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8
-      })
-
-      tl2.from(
-        ".title02", {
-        y: -30,
-        opacity: 0,
-        duration: 1,
-        delay: 0.8,
-        ease: "back.out(1.7)",
-      }).from(
-        ".intro02", {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-      })
-    });
-    return () => ctx.revert();
-  }, []);
   return (
     <div className="thanks">
       <div className="thanks_wrapper">

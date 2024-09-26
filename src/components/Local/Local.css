@@ -64,15 +64,16 @@
   top: -10%;
   left: 50%;
   white-space: nowrap;
+  text-transform: uppercase;
   transform: translateX(-50%);
-  font-size: clamp(42px, 8vw, 100px);
+  font-size: clamp(20px, 8vw, 70px);
   font-weight: 500;
   z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
   .local_heading-local {
-    top: -2rem;
+    top: -1.4rem;
   }
 }
 
