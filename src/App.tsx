@@ -36,8 +36,7 @@ function App() {
             trigger: '.invitation_img-left',
             start: "top center",
             toggleActions: "play none none reverse",
-            markers: true,
-            invalidateOnRefresh: true,
+            markers: false,
           }
         }
       )
@@ -51,8 +50,7 @@ function App() {
             trigger: '.invitation_img-right',
             start: "top center",
             toggleActions: "play none none reverse",
-            markers: true,
-            invalidateOnRefresh: true,
+            markers: false,
           }
         },
       )
@@ -62,8 +60,7 @@ function App() {
           trigger: '.local',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: true,
-          invalidateOnRefresh: true,
+          markers: false,
         }
       });
       timelineLocal.fromTo(
@@ -95,8 +92,7 @@ function App() {
           trigger: '.schedule',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: true,
-          invalidateOnRefresh: true,
+          markers: false,
         },
       });
       //gsap thanks
@@ -105,8 +101,7 @@ function App() {
           trigger: '.items01',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: true,
-          invalidateOnRefresh: true,
+          markers: false,
         }
       })
 
@@ -117,8 +112,7 @@ function App() {
           trigger: '.items02',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: true,
-          invalidateOnRefresh: true,
+          markers: false,
         }
       })
 
