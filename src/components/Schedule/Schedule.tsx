@@ -25,7 +25,7 @@ const Schedule = () => {
           trigger: '.schedule',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: true,
+          markers: false,
         },
       });
 
@@ -40,7 +40,7 @@ const Schedule = () => {
       </div>
       <div className="schedule_wrapper">
         <p className='schedule_heading-intro schedule_animation'>Tóm tắt bữa tiệc</p>
-        <h2 className='schedule_heading-title schedule_animation'>Lịch trình ngày đặc biệt của chúng tôi</h2>
+        <h2 className='schedule_heading-title schedule_animation'>Lịch trình ngày cưới của chúng mình</h2>
         <div className="schedule_inner">
           <div className="schedule_items schedule_animation">
             <p className="schedule_items-text01">9:00 Sáng</p>

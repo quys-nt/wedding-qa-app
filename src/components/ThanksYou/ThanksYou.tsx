@@ -8,6 +8,7 @@ import imgThank02 from "/assets/images/gallery/gallery14.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const ThanksYou = () => {
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -23,6 +24,7 @@ const ThanksYou = () => {
         scrollTrigger: {
           trigger: '.items02',
           start: "top center",
+          toggleActions: "play none none reverse",
           markers: false,
         }
       })
@@ -64,14 +66,14 @@ const ThanksYou = () => {
           <p className="thanks_headding-title title01">Cảm ơn</p>
           <img src={imgThank01} alt="thanks you" className="thanks_img" />
           <p className="thanks_headding-intro intro01">
-            Cảm ơn sự hiện diện của quý khách trong ngày cưới của chúng tôi, đó là niềm vinh dự và niềm hạnh phúc lớn lao với gia đình chúng tôi.
+            Sự hiện diện của bạn trong ngày cưới là niềm vinh dự và niềm hạnh phúc với gia đình chúng mình.
           </p>
         </div>
         <div className="thanks_warpper-item items02">
           <p className="thanks_headding-title title02">Thứ lỗi</p>
           <img src={imgThank02} alt="thanks you" className="thanks_img" />
           <p className="thanks_headding-intro intro02">
-            Chúng tôi cũng xin chân thành xin lỗi nếu có bất kỳ thiếu sót hay sơ suất nào trong buổi tiệc.
+            Trong buổi tiệc nếu cho thiếu sót hay sơ suất mong bạn vui vẻ bỏ qua và tận hưởng buổi tiệc nhé.
           </p>
         </div>
       </div>
