@@ -11,11 +11,20 @@ import Invitation from './components/Invitation/Invitation'
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+
   useEffect(() => {
-    ScrollTrigger.config({
-      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-    });
-  })
+    ScrollTrigger.refresh();
+    if (window.innerWidth < 1024) {
+      ScrollTrigger.config({
+        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+      });
+    }
+    return () => {
+      ScrollTrigger.config({
+        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize", // Trở về mặc định
+      });
+    };
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,7 +38,7 @@ function App() {
             trigger: '.invitation_img-left',
             start: "top center",
             toggleActions: "play none none reverse",
-            markers: false,
+            markers: true,
           }
         }
       )
@@ -43,7 +52,7 @@ function App() {
             trigger: '.invitation_img-right',
             start: "top center",
             toggleActions: "play none none reverse",
-            markers: false,
+            markers: true,
           }
         },
       )
@@ -51,9 +60,9 @@ function App() {
       const timelineLocal = gsap.timeline({
         scrollTrigger: {
           trigger: '.local',
-          start: "top 20%",
+          start: "top center",
           toggleActions: "play none none reverse",
-          markers: false,
+          markers: true,
         }
       });
       timelineLocal.fromTo(
@@ -94,7 +103,7 @@ function App() {
           trigger: '.items01',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: false,
+          markers: true,
         }
       })
 
@@ -105,7 +114,7 @@ function App() {
           trigger: '.items02',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: false,
+          markers: true,
         }
       })
 
