@@ -23,9 +23,9 @@ const Schedule = () => {
         ease: "expo.out",
         scrollTrigger: {
           trigger: '.schedule',
-          start: "top center",
+          start: "top 20%",
           toggleActions: "play none none reverse",
-          markers: false,
+          markers: true,
         },
       });
 

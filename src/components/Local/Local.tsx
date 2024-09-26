@@ -11,7 +11,7 @@ const Local = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: '.local',
-          start: "top center",
+          start: "top 20%",
           toggleActions: "play none none reverse",
           markers: false,
         }

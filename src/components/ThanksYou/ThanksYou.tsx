@@ -14,7 +14,7 @@ const ThanksYou = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.items01',
-          start: "top center",
+          start: "top 20%",
           toggleActions: "play none none reverse",
           markers: false,
         }
@@ -23,7 +23,7 @@ const ThanksYou = () => {
       const tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: '.items02',
-          start: "top center",
+          start: "top 20%",
           toggleActions: "play none none reverse",
           markers: false,
         }
