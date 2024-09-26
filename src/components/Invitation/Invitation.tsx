@@ -20,6 +20,7 @@ const Invitation = () => {
           scrollTrigger: {
             trigger: '.invitation_img-left',
             start: "top center",
+            toggleActions: "play none none reverse",
             markers: false,
           }
         }
@@ -33,6 +34,7 @@ const Invitation = () => {
           scrollTrigger: {
             trigger: '.invitation_img-right',
             start: "top center",
+            toggleActions: "play none none reverse",
             markers: false,
           }
         },
