@@ -13,16 +13,14 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
 
   useEffect(() => {
-    ScrollTrigger.refresh();
-    if (window.innerWidth < 1024) {
-      ScrollTrigger.config({
-        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-      });
-    }
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
     return () => {
-      ScrollTrigger.config({
-        autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize", // Trở về mặc định
-      });
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -39,6 +37,7 @@ function App() {
             start: "top center",
             toggleActions: "play none none reverse",
             markers: true,
+            invalidateOnRefresh: true,
           }
         }
       )
@@ -53,6 +52,7 @@ function App() {
             start: "top center",
             toggleActions: "play none none reverse",
             markers: true,
+            invalidateOnRefresh: true,
           }
         },
       )
@@ -63,6 +63,7 @@ function App() {
           start: "top center",
           toggleActions: "play none none reverse",
           markers: true,
+          invalidateOnRefresh: true,
         }
       });
       timelineLocal.fromTo(
@@ -95,6 +96,7 @@ function App() {
           start: "top center",
           toggleActions: "play none none reverse",
           markers: true,
+          invalidateOnRefresh: true,
         },
       });
       //gsap thanks
@@ -104,6 +106,7 @@ function App() {
           start: "top center",
           toggleActions: "play none none reverse",
           markers: true,
+          invalidateOnRefresh: true,
         }
       })
 
@@ -115,6 +118,7 @@ function App() {
           start: "top center",
           toggleActions: "play none none reverse",
           markers: true,
+          invalidateOnRefresh: true,
         }
       })
 
