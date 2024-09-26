@@ -9,7 +9,7 @@ const Schedule = () => {
         <img src={imgBg} alt="bg schedule" className="schedule_bg-img" />
       </div>
       <div className="schedule_wrapper">
-        <p className='schedule_heading-intro schedule_animation'>Tóm tắt bữa tiệc</p>
+        <p className='schedule_heading-intro schedule_animation'>Tóm tắt lịch trình</p>
         <h2 className='schedule_heading-title schedule_animation'>Lịch trình ngày cưới của chúng mình</h2>
         <div className="schedule_inner">
           <div className="schedule_items schedule_animation">

@@ -85,11 +85,10 @@ function App() {
           trigger: '.schedule',
           start: "top center",
           toggleActions: "play none none reverse",
-          markers: false,
+          markers: true,
         },
       });
       //gsap thanks
-      
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.items01',
