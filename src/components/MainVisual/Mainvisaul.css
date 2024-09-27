@@ -20,7 +20,7 @@
 @media screen and (max-width: 767px) {
   .mv_container {
     grid-template-columns: 1fr 1fr;
-    gap: 40px 30px;
+    gap: 45px 30px;
   }
 }
 
@@ -76,10 +76,9 @@
 
 @media screen and (max-width: 768px) {
   .mv_heading-intro {
-    top: 100%;
+    top: 102%;
     gap: 10px;
     font-size: clamp(1.8rem, 9vw, 4rem);
-
   }
 }
 
