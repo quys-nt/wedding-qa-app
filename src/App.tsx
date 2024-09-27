@@ -16,9 +16,9 @@ function App() {
     const handleResize = () => {
       ScrollTrigger.refresh();
     };
-  
+
     window.addEventListener('resize', handleResize);
-  
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -32,6 +32,7 @@ function App() {
         {
           xPercent: 0, opacity: 1, duration: 0.8,
           delay: 0.4,
+          ease: "circ.out",
           scrollTrigger: {
             trigger: '.invitation_img-left',
             start: "top center",
@@ -46,6 +47,7 @@ function App() {
         {
           xPercent: 0, opacity: 1, duration: 0.8,
           delay: 0.4,
+          ease: "circ.out",
           scrollTrigger: {
             trigger: '.invitation_img-right',
             start: "top center",
@@ -56,6 +58,7 @@ function App() {
       )
       // gsap Local
       const timelineLocal = gsap.timeline({
+        ease: "circ.out",
         scrollTrigger: {
           trigger: '.local',
           start: "top center",
@@ -87,7 +90,7 @@ function App() {
         duration: 1,
         stagger: 0.4,
         delay: 0.4,
-        ease: "expo.out",
+        ease: "circ.out",
         scrollTrigger: {
           trigger: '.schedule',
           start: "top center",
@@ -97,6 +100,7 @@ function App() {
       });
       //gsap thanks
       const tl = gsap.timeline({
+        ease: "circ.out",
         scrollTrigger: {
           trigger: '.items01',
           start: "top center",
@@ -120,7 +124,6 @@ function App() {
         ".title01", {
         y: -30,
         opacity: 0,
-        ease: "back.out(1.7)",
       }).from(
         ".intro01", {
         y: 30,
@@ -131,7 +134,6 @@ function App() {
         ".title02", {
         y: -30,
         opacity: 0,
-        ease: "back.out(1.7)",
       }).from(
         ".intro02", {
         y: 30,

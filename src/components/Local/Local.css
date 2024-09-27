@@ -11,10 +11,8 @@
 
 .local_container {
   display: grid;
-  grid-template-columns: minmax(80px, 270px) minmax(200px, 420px) minmax(
-      80px,
-      270px
-    );
+  grid-template-columns: minmax(80px, 270px) minmax(200px, 420px) minmax(80px,
+      270px);
   justify-content: space-between;
   align-items: center;
   gap: 100px;
@@ -83,4 +81,10 @@
   line-height: 1.6;
   font-size: clamp(0.8rem, 2vw, 1.6rem);
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .local_icon {
+    width: 60px;
+  }
 }
